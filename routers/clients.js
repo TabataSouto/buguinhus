@@ -1,11 +1,11 @@
 const express = require('express');
 const middlewares = require('../middlewares/validation');
-const databse = require('../database');
+const database = require('../database');
 
-const router = express;
+const router = express.Router();
 
 // Listando todas as pessoas
-router.get('/', (req, res) => res.status(200).json({ clients: databse }));
+router.get('/', (req, res) => res.status(200).json({ clients: database }));
 
 // Cadastrando nova pessoa
 router.put('/',
@@ -13,13 +13,13 @@ router.put('/',
   (req, res) => {
     const newClient = {
       ...req.body,
-      id: databse.length + 1,
+      id: database.length + 1,
     };
 
-    databse.push(newClient);
+    database.push(newClient);
 
-    res.status(201).json({ clients: databse[databse.length] });
+    res.status(201).json({ clients: database[database.length] });
   }
 );
 
-module.export = router;
+module.exports = router;
