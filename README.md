@@ -19,15 +19,13 @@ Atualmente estamos com alguns erros e nossa API **NÃO** funciona :disappointed:
 Atualmente temos esta **"organização"** :thinking: :smile:
 
 ```bash
-├── XX-XX-XXXX
-│   ├── middlewares
-│   │    └── validation.js
-│   ├── routers
-│   │   └── clients.js
-│   ├── database.js
-│   ├── index.js
-│   ├── package.json
-│   └── README.md
+├── middlewares
+│    └── validation.js
+├── routers
+│   └── clients.js
+├── database.js
+├── index.js
+├── package.json
 └── README.md
 ```
 
